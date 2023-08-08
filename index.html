@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fname" name="fname"><br><br>
+    <BUtton  onclick="add()">click</BUtton>
+    <div id="rest">
+
+    </div>
+</body>
+<SCript>
+    
+function add(){
+         let input1=document.getElementById("fname")
+         let  input2=input1.value
+         let input=document.createElement("input")
+          input.value=input2
+          rest.appendChild(input)
+          let edit=document.createElement("button");
+          let text_edit=document.createTextNode("edit")
+          edit.appendChild(text_edit)
+          rest.appendChild(edit)
+          let del=document.createElement("button")
+          let text_del=document.createTextNode("delete")
+          del.appendChild(text_del)
+          rest.appendChild(del)
+           input1.value=""
+           del.addEventListener("click",()=>{
+             input.remove();
+             del.remove();
+             edit.remove();
+           }
+             
+           )
+           edit.addEventListener("click",()=>{
+            input.value=""
+            
+
+           })
+          
+
+          }
+            
+    
+        
+    
+
+    
+</SCript>
+</html>
